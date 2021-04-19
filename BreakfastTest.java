@@ -8,6 +8,7 @@ import org.junit.Test;
 
 public class BreakfastTest {
     
+    //populateOrderMap base case
     @Test
     public void populateOrderMapTestNorm() {
         String[] order = { "1", "2", "3" };
@@ -20,6 +21,7 @@ public class BreakfastTest {
         assertEquals(b.items, test);
     }
 
+    //populateOrderMap more drink
     @Test
     public void populateOrderMapTestMoreCoffee() {
         String[] order = { "1", "2", "3", "3", "3" };
@@ -32,6 +34,7 @@ public class BreakfastTest {
         assertEquals(b.items, test);
     }
 
+    //populateOrderMap no main
     @Test
     public void populateOrderMapTestNoEggs() {
         String[] order = { "2", "3" };
@@ -43,6 +46,7 @@ public class BreakfastTest {
         assertEquals(b.items, test);
     }
 
+    //printOrder base case
     @Test
     public void printOrderTestNorm() {
         String[] order = { "1", "2", "3" };
@@ -53,6 +57,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder no drink
     @Test
     public void printOrderTestWater() {
         String[] order = { "1", "2" };
@@ -63,6 +68,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder extra coffee
     @Test
     public void printOrderTestMoreCoffee() {
         String[] order = { "1", "2", "3", "3", "3" };
@@ -73,6 +79,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder no main
     @Test
     public void printOrderTestNoMain() {
         String[] order = { "2", "3" };
@@ -83,6 +90,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder no side
     @Test
     public void printOrderTestNoSide() {
         String[] order = { "1", "3" };
@@ -93,6 +101,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder no main and side and extra drink
     @Test
     public void printOrderTestNoMainandSide() {
         String[] order = { "3", "3", "3" };
@@ -103,6 +112,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder more main
     @Test
     public void printOrderTestMoreEggs() {
         String[] order = { "1", "1", "2", "3" };
@@ -113,6 +123,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder more side
     @Test
     public void printOrderTestMoreToast() {
         String[] order = { "1", "2", "2", "3" };
@@ -123,6 +134,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder no main more side
     @Test
     public void printOrderTestNoEggsMoreToast() {
         String[] order = { "2", "2", "3" };
@@ -133,6 +145,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder base case out of order
     @Test
     public void printOrderTestOutOfOrder() {
         String[] order = { "2", "1", "3" };
@@ -143,6 +156,7 @@ public class BreakfastTest {
         assertEquals(output, test);
     }
 
+    //printOrder out of order more drink
     @Test
     public void printOrderTestOutOfOrderMoreCoffee() {
         String[] order = { "3", "2", "3", "1", "3" };
